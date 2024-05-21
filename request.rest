@@ -1,0 +1,106 @@
+//Create Users
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Dian",
+    "email": "Dian@gmail.com",
+    "password": "123456",
+    "confPassword":"123456",
+    "role":"admin"
+}
+
+###
+//get all users
+GET http://localhost:5000/users 
+
+###
+//get singgle data user berdasarkan uuid
+GET http://localhost:5000/users/7ff95faf-9b28-4cfb-ab5c-8784a2f8916f
+
+
+###
+//User Update
+PATCH  http://localhost:5000/users/457c0eef-8dc6-470f-a412-df1aadfcc780
+Content-Type: application/json
+
+{
+    "name": "viki",
+    "email": "user@gmail.com",
+    "password": "",
+    "confPassword":"",
+    "role":"user"
+}
+
+###
+//Delete a user
+DELETE http://localhost:5000/users/7ff95faf-9b28-4cfb-ab5c-8784a2f8916f
+
+
+
+###
+//Login Admin
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password": "123456"
+}
+
+###
+GET  http://localhost:5000/me
+
+###
+DELETE  http://localhost:5000/logOut
+
+###
+//Login User
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"user@gmail.com",
+    "password": "123456"
+}
+
+###
+//get all product
+GET http://localhost:5000/products
+
+###
+//POST data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Minyak Goreng",
+    "price": 14
+    
+}
+
+###
+//get singgle product
+GET http://localhost:5000/products/45dfd6d3-0a9d-48cc-957e-6
+
+###
+//UPDATE data product
+PATCH  http://localhost:5000/products/9adf511c-5641-4645-9d33-c
+Content-Type: application/json
+
+{
+    "name": "Mie Goreng",
+    "price": 50
+    
+}
+
+###
+//DELETE data product
+DELETE  http://localhost:5000/products/ba2bdca9-a52d-4ff9-bf38-4
+Content-Type: application/json
+
+{
+    "name": "Mie Goreng",
+    "price": 50
+    
+}
